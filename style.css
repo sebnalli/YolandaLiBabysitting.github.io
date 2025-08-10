@@ -1,0 +1,78 @@
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    margin: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #ffb6b9;
+    padding: 2rem;
+    text-align: center;
+    color: white;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+header p {
+    margin: 0.3rem 0 0;
+    font-size: 1.1rem;
+}
+
+section {
+    max-width: 800px;
+    margin: auto;
+    padding: 2rem;
+}
+
+h2 {
+    color: #ff6f61;
+    margin-bottom: 0.5rem;
+}
+
+.contact-info {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.contact-info p {
+    margin: 0.5rem 0;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+footer {
+    background: #ffb6b9;
+    text-align: center;
+    padding: 1rem;
+    color: white;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+}
+
+.schedule table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.schedule th,
+.schedule td {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    text-align: center;
+}
