@@ -17,7 +17,7 @@ body {
   margin: 0 auto;
 }
 
-/* Add pink border around entire main content */
+/* Pink border around entire main content */
 main.container {
   border: 3px solid #d96f91;
   border-radius: 12px;
@@ -151,13 +151,14 @@ nav ul li a:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: right;
 }
 
 .welcome h2 {
   color: #d96f91;
   font-weight: 700;
   margin-bottom: 1rem;
-  text-align: left;
+  text-align: right;
 }
 
 .welcome p {
@@ -165,16 +166,14 @@ nav ul li a:hover {
   color: #555;
   margin-bottom: 1rem;
   line-height: 1.5;
+  text-align: right;
 }
 
 /* Schedule Section */
 .schedule {
   padding: 3rem 0;
-  border: 2px solid #d96f91;
-  border-radius: 10px;
   max-width: 700px;
   margin: 0 auto 3rem auto;
-  background-color: #fff0f5;
 }
 
 .schedule h2 {
@@ -196,12 +195,6 @@ nav ul li a:hover {
   text-align: center;
   font-weight: 600;
   color: #b94c6a;
-}
-
-/* THIS IS THE ADDED GREY DASHED SEPARATOR BETWEEN DAY AND HOURS */
-.schedule td:first-child {
-  border-right: 3px dashed grey;
-  padding-right: 1rem;
 }
 
 /* Rates Section */
@@ -322,6 +315,10 @@ footer {
   }
   .gallery, .welcome {
     flex: 1 1 100%;
+    text-align: center;
+  }
+  .welcome h2, .welcome p {
+    text-align: center;
   }
 }
 
