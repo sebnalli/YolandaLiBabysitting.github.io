@@ -96,35 +96,30 @@ nav ul li a:hover {
   font-weight: 500;
 }
 
-/* Sections */
-h2 {
+/* Welcome + Gallery two column layout */
+.welcome-gallery {
+  display: flex;
+  gap: 2rem;
+  padding: 3rem 0;
+  flex-wrap: wrap;
+}
+
+.gallery {
+  flex: 1 1 55%;
+}
+
+.gallery h2 {
   color: #d96f91;
   font-weight: 700;
   margin-bottom: 1rem;
   text-align: center;
 }
 
-section {
-  padding: 3rem 0;
-  border-bottom: 1px solid #e0dce3;
-}
-
-/* Welcome & Experience */
-.welcome p,
-.experience p {
-  max-width: 700px;
-  margin: 0 auto;
-  font-size: 1.125rem;
-  text-align: center;
-  color: #555;
-}
-
-/* Gallery */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
   gap: 1rem;
-  max-width: 900px;
+  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -142,22 +137,135 @@ section {
   transform: scale(1.05);
 }
 
-/* Enrollment Form */
-.enrollment form {
+.welcome {
+  flex: 1 1 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.welcome h2 {
+  color: #d96f91;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.welcome p {
+  font-size: 1.125rem;
+  color: #555;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+/* Schedule Section */
+.schedule {
+  padding: 3rem 0;
+  border: 2px solid #d96f91;
+  border-radius: 10px;
   max-width: 700px;
-  margin: 0 auto;
+  margin: 0 auto 3rem auto;
+  background-color: #fff0f5;
+}
+
+.schedule h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  color: #d96f91;
+}
+
+.schedule table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.schedule th,
+.schedule td {
+  border: 1px solid #d96f91;
+  padding: 0.75rem;
+  text-align: center;
+  font-weight: 600;
+  color: #b94c6a;
+}
+
+.schedule th {
+  background-color: #f9d6e0;
+}
+
+/* Rates Section */
+.rates {
+  max-width: 400px;
+  margin: 0 auto 3rem auto;
+  text-align: center;
+}
+
+.rates h2 {
+  color: #d96f91;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.rates-box {
+  border: 2px solid #d96f91;
+  padding: 1.5rem;
+  border-radius: 10px;
+  background-color: #fff0f5;
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: #b94c6a;
+}
+
+/* Testimonials Section */
+.testimonials {
+  max-width: 700px;
+  margin: 0 auto 3rem auto;
+  padding: 0 1rem;
+}
+
+.testimonials h2 {
+  text-align: center;
+  color: #d96f91;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.testimonials blockquote {
+  font-style: italic;
+  font-size: 1.125rem;
+  border-left: 5px solid #d96f91;
+  padding-left: 1rem;
+  margin-bottom: 1.5rem;
+  color: #666;
+}
+
+/* Enrollment Form */
+.enrollment {
+  max-width: 700px;
+  margin: 0 auto 3rem auto;
+  padding: 0 1rem;
+}
+
+.enrollment h2 {
+  color: #d96f91;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.enroll-form {
   display: flex;
   flex-direction: column;
 }
 
-.enrollment label {
+.enroll-form label {
   margin: 0.75rem 0 0.25rem;
   font-weight: 600;
   color: #444;
 }
 
-.enrollment input,
-.enrollment textarea {
+.enroll-form input,
+.enroll-form textarea {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -165,11 +273,11 @@ section {
   resize: vertical;
 }
 
-.enrollment textarea {
+.enroll-form textarea {
   min-height: 70px;
 }
 
-.enrollment button[type="submit"] {
+.enroll-form button[type="submit"] {
   margin-top: 1.5rem;
   padding: 12px;
   background-color: #d96f91;
@@ -182,7 +290,7 @@ section {
   transition: background-color 0.3s ease;
 }
 
-.enrollment button[type="submit"]:hover {
+.enroll-form button[type="submit"]:hover {
   background-color: #b94c6a;
 }
 
@@ -197,12 +305,21 @@ footer {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 992px) {
+  .welcome-gallery {
+    flex-direction: column;
+  }
+  .gallery, .welcome {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 480px) {
   .hero-text h1 {
-    font-size: 2.25rem;
+    font-size: 2rem;
   }
   .hero-text p {
-    font-size: 1.125rem;
+    font-size: 1rem;
   }
   nav ul {
     gap: 1rem;
