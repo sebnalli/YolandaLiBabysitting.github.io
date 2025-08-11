@@ -198,8 +198,10 @@ nav ul li a:hover {
   color: #b94c6a;
 }
 
-.schedule th {
-  background-color: #f9d6e0;
+/* THIS IS THE ADDED GREY DASHED SEPARATOR BETWEEN DAY AND HOURS */
+.schedule td:first-child {
+  border-right: 3px dashed grey;
+  padding-right: 1rem;
 }
 
 /* Rates Section */
