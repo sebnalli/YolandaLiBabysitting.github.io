@@ -17,6 +17,15 @@ body {
   margin: 0 auto;
 }
 
+/* Add pink border around entire main content */
+main.container {
+  border: 3px solid #d96f91;
+  border-radius: 12px;
+  padding: 2rem 3rem;
+  background-color: #fff0f5;
+  margin-bottom: 3rem;
+}
+
 /* Header */
 header {
   background-color: #fff;
