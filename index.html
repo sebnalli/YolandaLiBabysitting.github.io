@@ -1,96 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Babysitting Services</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yolanda Li Babysitting Services</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <h1>Babysitting Services</h1>
-
-    <div class="panel">
-        <button class="panel-btn">About Me</button>
-        <div class="panel-content">
-            <p>Hello! I’m Yolanda, a responsible and caring babysitter with years of experience. I create a safe and fun environment for kids while parents are away.</p>
-        </div>
+  <header>
+    <div class="container header-content">
+      <img src="images/logo.png" alt="Yolanda Li Babysitting Logo" class="logo" />
+      <nav>
+        <ul>
+          <li><a href="#welcome">Welcome</a></li>
+          <li><a href="#experience">Your Child's Experience</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#enrollment">Enrollment</a></li>
+        </ul>
+      </nav>
     </div>
+  </header>
 
-    <div class="panel">
-        <button class="panel-btn">Contact</button>
-        <div class="panel-content">
-            <p>Email: example@email.com</p>
-            <p>Phone: (123) 456-7890</p>
-        </div>
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Yolanda Li Babysitting Services</h1>
+      <p>Reliable • Caring • Trustworthy</p>
     </div>
+  </section>
 
-    <div class="panel">
-        <button class="panel-btn">Availability</button>
-        <div class="panel-content">
-            <p>Monday - Friday: 7:30 AM - 5:30 PM</p>
-            <p>Weekends: Upon Request</p>
-        </div>
+  <main class="container">
+    <section id="welcome" class="welcome">
+      <h2>Welcome</h2>
+      <p>
+        Hi! I'm Yolanda Li, a responsible and caring babysitter with years of experience. I create a safe, fun, and nurturing environment where your children can learn and play while you’re away.
+      </p>
+    </section>
+
+    <section id="experience" class="experience">
+      <h2>Your Child’s Experience</h2>
+      <p>
+        Your child will be well cared for with a full day of activities. They are fed nutritious meals and snacks, taken for walks outside to enjoy fresh air, and have plenty of toys and games to keep them entertained and stimulated. Safety is always a priority, and I ensure a warm, welcoming atmosphere for every child.
+      </p>
+    </section>
+
+    <section id="gallery" class="gallery">
+      <h2>Gallery</h2>
+      <div class="gallery-grid">
+        <img src="images/photo1.jpg" alt="Kids playing with toys" />
+        <img src="images/photo2.jpg" alt="Outdoor walk with children" />
+        <img src="images/photo3.jpg" alt="Creative arts and crafts" />
+        <img src="images/photo4.jpg" alt="Storytime with books" />
+        <img src="images/photo5.jpg" alt="Fun learning activities" />
+        <img src="images/photo6.jpg" alt="Nap time comfort" />
+      </div>
+    </section>
+
+    <section id="enrollment" class="enrollment">
+      <h2>Kid Enrollment</h2>
+      <form action="https://formspree.io/f/mnnzllzn" method="POST" class="enroll-form">
+        <label for="child_first_name">Child's First Name *</label>
+        <input type="text" id="child_first_name" name="child_first_name" required />
+
+        <label for="child_last_name">Child's Last Name *</label>
+        <input type="text" id="child_last_name" name="child_last_name" required />
+
+        <label for="parent_first_name">Parent's First Name *</label>
+        <input type="text" id="parent_first_name" name="parent_first_name" required />
+
+        <label for="parent_last_name">Parent's Last Name *</label>
+        <input type="text" id="parent_last_name" name="parent_last_name" required />
+
+        <label for="dob">Child's Date of Birth *</label>
+        <input type="date" id="dob" name="dob" required />
+
+        <label for="allergies">Allergies</label>
+        <textarea id="allergies" name="allergies" rows="3"></textarea>
+
+        <label for="address">Address *</label>
+        <input type="text" id="address" name="address" required />
+
+        <label for="contact_info">Contact Information *</label>
+        <input type="text" id="contact_info" name="contact_info" required />
+
+        <label for="additional_info">Additional Info</label>
+        <textarea id="additional_info" name="additional_info" rows="3"></textarea>
+
+        <button type="submit">Submit Enrollment</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-content">
+      &copy; 2025 Yolanda Li Babysitting Services
     </div>
-
-    <div class="panel">
-        <button class="panel-btn">Rates</button>
-        <div class="panel-content">
-            <p>$25/hour</p>
-            <p>$180 for a full day (7:30 AM - 5:30 PM)</p>
-        </div>
-    </div>
-
-    <div class="panel">
-        <button class="panel-btn">Gallery</button>
-        <div class="panel-content">
-            <p>Photos coming soon!</p>
-        </div>
-    </div>
-
-    <div class="panel">
-        <button class="panel-btn">Testimonials</button>
-        <div class="panel-content">
-            <p>"Yolanda is amazing with kids! My children love her." - Parent</p>
-        </div>
-    </div>
-
-    <div class="panel">
-        <button class="panel-btn">Kid Enrollment</button>
-        <div class="panel-content">
-            <form action="https://formspree.io/f/mnnzllzn" method="POST">
-                <label>Child's First Name:</label>
-                <input type="text" name="child_first_name" required>
-
-                <label>Child's Last Name:</label>
-                <input type="text" name="child_last_name" required>
-
-                <label>Parent's First Name:</label>
-                <input type="text" name="parent_first_name" required>
-
-                <label>Parent's Last Name:</label>
-                <input type="text" name="parent_last_name" required>
-
-                <label>Date of Birth:</label>
-                <input type="date" name="dob" required>
-
-                <label>Allergies:</label>
-                <textarea name="allergies"></textarea>
-
-                <label>Address:</label>
-                <input type="text" name="address">
-
-                <label>Contact Information:</label>
-                <input type="text" name="contact_info" required>
-
-                <label>Additional Info:</label>
-                <textarea name="additional_info"></textarea>
-
-                <button type="submit">Submit</button>
-            </form>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
+  </footer>
 </body>
 </html>
