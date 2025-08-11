@@ -1,92 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Yolanda Li Babysitting Services</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Babysitting Services</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
+    <h1>Babysitting Services</h1>
 
-    <header>
-        <h1>Yolanda Li Babysitting Services</h1>
-        <p>Reliable • Caring • Trustworthy</p>
-    </header>
-
-    <section>
-        <h2>About Me</h2>
-        <p>Hi! I'm Yolanda Li, a caring and responsible babysitter with years of experience caring for children of all
-            ages. I’m CPR and First Aid certified, and I love creating fun, safe, and engaging activities for kids.</p>
-    </section>
-
-    <section>
-        <h2>Contact</h2>
-        <div class="contact-info">
-            <p><strong>Phone:</strong> (555) 123-4567</p>
-            <p><strong>Email:</strong> <a href="mailto:example@email.com">example@email.com</a></p>
-            <p><strong>Location:</strong> Toronto, ON</p>
+    <div class="panel">
+        <button class="panel-btn">About Me</button>
+        <div class="panel-content">
+            <p>Hello! I’m Yolanda, a responsible and caring babysitter with years of experience. I create a safe and fun environment for kids while parents are away.</p>
         </div>
-    </section>
+    </div>
 
-    <section class="schedule">
-        <h2>Availability</h2>
-        <table>
-            <tr>
-                <th>Day</th>
-                <th>Hours</th>
-            </tr>
-            <tr>
-                <td>Monday</td>
-                <td>After 3 PM</td>
-            </tr>
-            <tr>
-                <td>Tuesday</td>
-                <td>After 3 PM</td>
-            </tr>
-            <tr>
-                <td>Wednesday</td>
-                <td>Full Day</td>
-            </tr>
-            <tr>
-                <td>Thursday</td>
-                <td>After 3 PM</td>
-            </tr>
-            <tr>
-                <td>Friday</td>
-                <td>Evening</td>
-            </tr>
-            <tr>
-                <td>Saturday</td>
-                <td>Full Day</td>
-            </tr>
-            <tr>
-                <td>Sunday</td>
-                <td>Full Day</td>
-            </tr>
-        </table>
-    </section>
-
-    <section>
-        <h2>Gallery</h2>
-        <div class="gallery">
-            <img src="images/photo1.jpg" alt="Babysitting activity">
-            <img src="images/photo2.jpg" alt="Kids playing">
-            <img src="images/photo3.jpg" alt="Fun outdoor day">
+    <div class="panel">
+        <button class="panel-btn">Contact</button>
+        <div class="panel-content">
+            <p>Email: example@email.com</p>
+            <p>Phone: (123) 456-7890</p>
         </div>
-    </section>
+    </div>
 
-    <section>
-        <h2>Testimonials</h2>
-        <blockquote>“Yolanda is amazing with our kids! They look forward to every visit.” — Jane D.</blockquote>
-        <blockquote>“Always on time, responsible, and caring.” — Alex P.</blockquote>
-    </section>
+    <div class="panel">
+        <button class="panel-btn">Availability</button>
+        <div class="panel-content">
+            <p>Monday - Friday: 7:30 AM - 5:30 PM</p>
+            <p>Weekends: Upon Request</p>
+        </div>
+    </div>
 
-    <footer>
-        &copy; 2025 Yolanda Li Babysitting Services
-    </footer>
+    <div class="panel">
+        <button class="panel-btn">Rates</button>
+        <div class="panel-content">
+            <p>$25/hour</p>
+            <p>$180 for a full day (7:30 AM - 5:30 PM)</p>
+        </div>
+    </div>
 
+    <div class="panel">
+        <button class="panel-btn">Gallery</button>
+        <div class="panel-content">
+            <p>Photos coming soon!</p>
+        </div>
+    </div>
+
+    <div class="panel">
+        <button class="panel-btn">Testimonials</button>
+        <div class="panel-content">
+            <p>"Yolanda is amazing with kids! My children love her." - Parent</p>
+        </div>
+    </div>
+
+    <div class="panel">
+        <button class="panel-btn">Kid Enrollment</button>
+        <div class="panel-content">
+            <form action="https://formspree.io/f/mnnzllzn" method="POST">
+                <label>Child's First Name:</label>
+                <input type="text" name="child_first_name" required>
+
+                <label>Child's Last Name:</label>
+                <input type="text" name="child_last_name" required>
+
+                <label>Parent's First Name:</label>
+                <input type="text" name="parent_first_name" required>
+
+                <label>Parent's Last Name:</label>
+                <input type="text" name="parent_last_name" required>
+
+                <label>Date of Birth:</label>
+                <input type="date" name="dob" required>
+
+                <label>Allergies:</label>
+                <textarea name="allergies"></textarea>
+
+                <label>Address:</label>
+                <input type="text" name="address">
+
+                <label>Contact Information:</label>
+                <input type="text" name="contact_info" required>
+
+                <label>Additional Info:</label>
+                <textarea name="additional_info"></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
-
 </html>
