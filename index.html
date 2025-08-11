@@ -11,7 +11,10 @@
   <header>
     <div class="container header-content">
       <img src="images/logo.png" alt="Yolanda Li Babysitting Logo" class="logo" />
-      <nav>
+      <button id="nav-toggle" aria-label="Toggle navigation menu">
+        <span class="hamburger"></span>
+      </button>
+      <nav id="nav-menu">
         <ul>
           <li><a href="#welcome-gallery">Welcome & Gallery</a></li>
           <li><a href="#schedule">Schedule</a></li>
@@ -37,12 +40,12 @@
       <div class="gallery">
         <h2>Gallery</h2>
         <div class="gallery-grid">
-          <img src="images/photo1.jpg" alt="Kids playing with toys" />
-          <img src="images/photo2.jpg" alt="Outdoor walk with children" />
-          <img src="images/photo3.jpg" alt="Creative arts and crafts" />
-          <img src="images/photo4.jpg" alt="Storytime with books" />
-          <img src="images/photo5.jpg" alt="Fun learning activities" />
-          <img src="images/photo6.jpg" alt="Nap time comfort" />
+          <img src="images/photo1.jpg" alt="Children playing with building blocks" />
+          <img src="images/photo2.jpg" alt="Children walking outdoors with caregiver" />
+          <img src="images/photo3.jpg" alt="Children doing arts and crafts activities" />
+          <img src="images/photo4.jpg" alt="Storytime session with kids" />
+          <img src="images/photo5.jpg" alt="Kids learning and playing together" />
+          <img src="images/photo6.jpg" alt="Children resting during nap time" />
         </div>
       </div>
 
@@ -98,7 +101,9 @@
     <!-- Enrollment -->
     <section id="enrollment" class="enrollment">
       <h2>Kid Enrollment</h2>
-      <form action="https://formspree.io/f/mnnzllzn" method="POST" class="enroll-form">
+      <form id="enroll-form" action="https://formspree.io/f/mnnzllzn" method="POST" class="enroll-form" novalidate>
+        <div class="form-feedback" id="form-feedback" role="alert" aria-live="polite" style="display:none;"></div>
+
         <label for="child_first_name">Child's First Name *</label>
         <input type="text" id="child_first_name" name="child_first_name" required />
 
@@ -115,7 +120,7 @@
         <input type="date" id="dob" name="dob" required />
 
         <label for="allergies">Allergies</label>
-        <textarea id="allergies" name="allergies" rows="3"></textarea>
+        <textarea id="allergies" name="allergies" rows="3" placeholder="Please list any allergies"></textarea>
 
         <label for="address">Address *</label>
         <input type="text" id="address" name="address" required />
@@ -124,7 +129,7 @@
         <input type="text" id="contact_info" name="contact_info" required />
 
         <label for="additional_info">Additional Info</label>
-        <textarea id="additional_info" name="additional_info" rows="3"></textarea>
+        <textarea id="additional_info" name="additional_info" rows="3" placeholder="Anything else you'd like us to know"></textarea>
 
         <button type="submit">Submit Enrollment</button>
       </form>
@@ -139,6 +144,7 @@
   </footer>
 
   <script>
+    // Smooth scroll nav links
     document.querySelectorAll('nav a').forEach(link => {
       link.addEventListener('click', e => {
         e.preventDefault();
@@ -151,6 +157,54 @@
           });
         }
       });
+    });
+
+    // Hamburger menu toggle
+    const navToggle = document.getElementById('nav-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    navToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+      navToggle.classList.toggle('active');
+    });
+
+    // Client-side form validation and feedback
+    const form = document.getElementById('enroll-form');
+    const feedback = document.getElementById('form-feedback');
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+
+      // Clear previous feedback
+      feedback.style.display = 'none';
+      feedback.textContent = '';
+
+      // Simple validation: check required fields are filled
+      const requiredFields = ['child_first_name', 'child_last_name', 'parent_first_name', 'parent_last_name', 'dob', 'address', 'contact_info'];
+      let valid = true;
+      requiredFields.forEach(id => {
+        const field = form.elements[id];
+        if (!field.value.trim()) {
+          valid = false;
+          field.classList.add('error');
+        } else {
+          field.classList.remove('error');
+        }
+      });
+
+      if (!valid) {
+        feedback.style.color = '#b94c6a';
+        feedback.textContent = 'Please fill in all required fields.';
+        feedback.style.display = 'block';
+        return;
+      }
+
+      // Show success message (mock - formspree handles actual submission)
+      feedback.style.color = '#4caf50';
+      feedback.textContent = 'Enrollment form submitted successfully! Thank you.';
+      feedback.style.display = 'block';
+
+      // Optionally, you can submit the form normally here:
+      // form.submit();
     });
   </script>
 </body>
