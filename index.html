@@ -13,9 +13,10 @@
       <img src="images/logo.png" alt="Yolanda Li Babysitting Logo" class="logo" />
       <nav>
         <ul>
-          <li><a href="#welcome">Welcome</a></li>
-          <li><a href="#experience">Your Child's Experience</a></li>
-          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#welcome-gallery">Welcome & Gallery</a></li>
+          <li><a href="#schedule">Schedule</a></li>
+          <li><a href="#rates">Rates</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
           <li><a href="#enrollment">Enrollment</a></li>
         </ul>
       </nav>
@@ -30,32 +31,71 @@
   </section>
 
   <main class="container">
-    <section id="welcome" class="welcome">
-      <h2>Welcome</h2>
-      <p>
-        Hi! I'm Yolanda Li, a responsible and caring babysitter with years of experience. I create a safe, fun, and nurturing environment where your children can learn and play while you’re away.
-      </p>
-    </section>
 
-    <section id="experience" class="experience">
-      <h2>Your Child’s Experience</h2>
-      <p>
-        Your child will be well cared for with a full day of activities. They are fed nutritious meals and snacks, taken for walks outside to enjoy fresh air, and have plenty of toys and games to keep them entertained and stimulated. Safety is always a priority, and I ensure a warm, welcoming atmosphere for every child.
-      </p>
-    </section>
+    <!-- Welcome + Gallery Two Column -->
+    <section id="welcome-gallery" class="welcome-gallery">
+      <div class="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery-grid">
+          <img src="images/photo1.jpg" alt="Kids playing with toys" />
+          <img src="images/photo2.jpg" alt="Outdoor walk with children" />
+          <img src="images/photo3.jpg" alt="Creative arts and crafts" />
+          <img src="images/photo4.jpg" alt="Storytime with books" />
+          <img src="images/photo5.jpg" alt="Fun learning activities" />
+          <img src="images/photo6.jpg" alt="Nap time comfort" />
+        </div>
+      </div>
 
-    <section id="gallery" class="gallery">
-      <h2>Gallery</h2>
-      <div class="gallery-grid">
-        <img src="images/photo1.jpg" alt="Kids playing with toys" />
-        <img src="images/photo2.jpg" alt="Outdoor walk with children" />
-        <img src="images/photo3.jpg" alt="Creative arts and crafts" />
-        <img src="images/photo4.jpg" alt="Storytime with books" />
-        <img src="images/photo5.jpg" alt="Fun learning activities" />
-        <img src="images/photo6.jpg" alt="Nap time comfort" />
+      <div class="welcome">
+        <h2>Welcome</h2>
+        <p>
+          Hi! I'm Yolanda Li, a responsible and caring babysitter with years of experience. I create a safe, fun, and nurturing environment where your children can learn and play while you’re away.
+        </p>
+        <p>
+          Your child will be well cared for with a full day of activities. They are fed nutritious meals and snacks, taken for walks outside to enjoy fresh air, and have plenty of toys and games to keep them entertained and stimulated. Safety is always a priority, and I ensure a warm, welcoming atmosphere for every child.
+        </p>
       </div>
     </section>
 
+    <!-- Schedule -->
+    <section id="schedule" class="schedule">
+      <h2>Availability</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Day</th>
+            <th>Hours</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Monday</td><td>After 3 PM</td></tr>
+          <tr><td>Tuesday</td><td>After 3 PM</td></tr>
+          <tr><td>Wednesday</td><td>Full Day</td></tr>
+          <tr><td>Thursday</td><td>After 3 PM</td></tr>
+          <tr><td>Friday</td><td>Evening</td></tr>
+          <tr><td>Saturday</td><td>Full Day</td></tr>
+          <tr><td>Sunday</td><td>Full Day</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Rates -->
+    <section id="rates" class="rates">
+      <h2>Rates</h2>
+      <div class="rates-box">
+        <p><strong>$25/hour</strong></p>
+        <p><strong>$180/full day</strong> (7:30 AM - 5:30 PM)</p>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="testimonials">
+      <h2>Testimonials</h2>
+      <blockquote>“Yolanda is amazing with our kids! They look forward to every visit.” — Jane D.</blockquote>
+      <blockquote>“Always on time, responsible, and caring.” — Alex P.</blockquote>
+    </section>
+
+    <!-- Enrollment -->
     <section id="enrollment" class="enrollment">
       <h2>Kid Enrollment</h2>
       <form action="https://formspree.io/f/mnnzllzn" method="POST" class="enroll-form">
@@ -89,6 +129,7 @@
         <button type="submit">Submit Enrollment</button>
       </form>
     </section>
+
   </main>
 
   <footer>
