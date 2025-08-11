@@ -1,69 +1,210 @@
+/* Reset & base */
+* {
+  box-sizing: border-box;
+}
+
 body {
-    font-family: 'Poppins', sans-serif;
-    background: #f9f9f9;
-    color: #333;
-    margin: 0;
-    padding: 20px;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f6f4f7;
+  color: #333;
+  line-height: 1.6;
 }
 
-h1 {
-    text-align: center;
-    margin-bottom: 20px;
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
-.panel {
-    border: 1px solid #ccc;
-    margin-bottom: 10px;
-    border-radius: 8px;
-    background: white;
-    overflow: hidden;
+/* Header */
+header {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
 }
 
-.panel-btn {
-    width: 100%;
-    padding: 15px;
-    font-size: 18px;
-    font-weight: 600;
-    text-align: left;
-    border: none;
-    background: #4CAF50;
-    color: white;
-    cursor: pointer;
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
 }
 
-.panel-btn:hover {
-    background: #45a049;
+.logo {
+  height: 50px;
+  cursor: pointer;
 }
 
-.panel-content {
-    padding: 15px;
-    display: none;
-    background: #fff;
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
+nav ul li a {
+  color: #d96f91;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
 }
 
-label {
-    margin-top: 10px;
+nav ul li a:hover {
+  color: #b94c6a;
 }
 
-input, textarea, button {
-    margin-top: 5px;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+/* Hero Section */
+.hero {
+  background: url('images/hero-bg.jpg') no-repeat center center/cover;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 80px; /* account for fixed header */
+  color: white;
+  position: relative;
 }
 
-button[type="submit"] {
-    background: #4CAF50;
-    color: white;
-    cursor: pointer;
-    margin-top: 15px;
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(217, 111, 145, 0.6); /* pink overlay */
+  z-index: 1;
 }
 
-button[type="submit"]:hover {
-    background: #45a049;
+.hero-text {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.hero-text p {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+/* Sections */
+h2 {
+  color: #d96f91;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+section {
+  padding: 3rem 0;
+  border-bottom: 1px solid #e0dce3;
+}
+
+/* Welcome & Experience */
+.welcome p,
+.experience p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.125rem;
+  text-align: center;
+  color: #555;
+}
+
+/* Gallery */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  height: 180px;
+  box-shadow: 0 4px 8px rgba(217,111,145,0.25);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* Enrollment Form */
+.enrollment form {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.enrollment label {
+  margin: 0.75rem 0 0.25rem;
+  font-weight: 600;
+  color: #444;
+}
+
+.enrollment input,
+.enrollment textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+.enrollment textarea {
+  min-height: 70px;
+}
+
+.enrollment button[type="submit"] {
+  margin-top: 1.5rem;
+  padding: 12px;
+  background-color: #d96f91;
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.enrollment button[type="submit"]:hover {
+  background-color: #b94c6a;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.5rem 0;
+  background-color: #fff;
+  color: #d96f91;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 2.25rem;
+  }
+  .hero-text p {
+    font-size: 1.125rem;
+  }
+  nav ul {
+    gap: 1rem;
+  }
 }
